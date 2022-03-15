@@ -7,4 +7,21 @@ const simbolos = `!"#$%&'()*+,-./:;<=>?@[]_^~{|}`;
 
 const geraSimbolos = () => simbolos[rand(0, simbolos.length)];
 
-console.log(geraSimbolos());
+// console.log(geraSimbolos());
+
+export default function geraSenha(qtd, maiusculas, minusculas, num, simbolos){
+    const senhaArray = [];
+    qtd = Number(qtd);
+
+    for(let i = 0; i < qtd; i++){
+        maiusculas && senhaArray.push(geraMaiuscula());
+
+        minusculas && senhaArray.push(geraMinuscula());
+
+        num && senhaArray.push(geraNumero());
+
+        simbolos && senhaArray.push(geraSimbolos());
+    }
+
+    return(senhaArray.join('').slice(0, qtd));
+}

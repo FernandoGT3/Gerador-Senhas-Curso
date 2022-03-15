@@ -1,5 +1,5 @@
 :root{
-    --primary-color:rgb(56, 135, 200);
+    --primary-color:rgb(56, 200, 181);
 }
 
 *{
@@ -20,7 +20,7 @@ body{
     max-width: 640px;
     margin: 50px auto;
     padding: 50px;
-    background-color: wheat;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     box-shadow: 10px 10px 5px gray;
 }
@@ -37,4 +37,44 @@ body{
     font-weight: bold;
     margin-bottom: 30px;
     letter-spacing: 5px;
+}
+
+input[type = "checkbox"]{
+    width: 5em;
+    height: 1.5em;
+    padding: 10px;
+}
+
+input[type = "number"]{
+    width: 5em;
+    height: 2em;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+
+
+p{
+    margin: 10px auto;
+}
+
+button{
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    margin-top: 30px;
+}
+
+button:hover{
+    color:  var(--primary-color);
+    background-color: white;
 }
